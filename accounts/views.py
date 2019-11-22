@@ -28,7 +28,7 @@ def purge(request):
         if(platform.system()=='Windows'):
             os.system('del /q /s admin_files')
         else :
-            os.system('rm -r admin_files')
+            os.system('rm -r admin_files/*')
         
         data=open('entry_file/entry.txt','w')
         data.write('')
