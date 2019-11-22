@@ -20,7 +20,8 @@ def fetch(request):
             data=pd.read_csv(fname)
             labels=data.pop('NAME')
             for each in labels:
-                if(user==each or user_upper==each):
+                var=each.upper()
+                if(user_upper==var):
                     arr.append(entry)
                     break
 
