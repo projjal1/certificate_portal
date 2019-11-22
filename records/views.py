@@ -36,7 +36,11 @@ def certificate_gen(request):
 
         img = Image.open(img_path)
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("arial.ttf", 100)
+        try:
+            font = ImageFont.truetype("arial.ttf", 100)
+        except:
+            font = ImageFont.truetype("/usr/share/fonts/truetype/freefont/FreeMono.ttf",100)
+            
         draw.text((1400,1400),usr,fill='black',font=font)
         img.save('output_files/output.jpg')
 
