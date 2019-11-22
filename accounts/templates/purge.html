@@ -15,6 +15,9 @@
 <br>
 {%if ds%}
 <p>Currently having {{ds}} no. of databases.</p>
+{% for each in rec%}
+<p>{{each}}</p>
+{%endfor%}
 {%else%}
 <p>You have not uploaded any database as of yet.</p>
 {%endif%}

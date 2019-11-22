@@ -38,10 +38,12 @@ def purge(request):
     
     else:
         x=0
+        arr=[]
         data=open('entry_file/entry.txt','r')
         for each in data:
             x+=1
+            arr.append(each)
         data.close()
-        return render(request,'purge.html',{'ds':x})
+        return render(request,'purge.html',{'ds':x,'rec':arr})
 
 
