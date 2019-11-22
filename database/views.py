@@ -8,7 +8,7 @@ def add_entry(request):
         ds=request.FILES['file_ds']
         img=request.FILES['cert']
 
-        filename=open('admin_files/entry.txt','a')
+        filename=open('entry_file/entry.txt','a')
         filename.write(title+'\n')
         filename.close()
                 

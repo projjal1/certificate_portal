@@ -27,16 +27,18 @@ def purge(request):
     if(request.method=='POST'):
         if(platform.system()=='Windows'):
             os.system('del /q /s admin_files')
-            os.system('cat>admin_files/entry.txt')
         else :
             os.system('rm -r admin_files')
-            os.system('echo.>admin_files/entry.txt')
+        
+        data=open('entry_file/entry.txt','w')
+        data.write('')
+        data.close()
 
         return redirect('base')
     
     else:
         x=0
-        data=open('admin_files/entry.txt','r')
+        data=open('entry_file/entry.txt','r')
         for each in data:
             x+=1
         data.close()

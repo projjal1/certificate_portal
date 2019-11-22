@@ -13,7 +13,7 @@ def fetch(request):
         user_upper=user.upper()
         
         arr=[]
-        data=open('admin_files/entry.txt','r')
+        data=open('entry_file/entry.txt','r')
         for each in data:
             entry=each[:-1]
             fname='admin_files/'+entry+'.csv'
