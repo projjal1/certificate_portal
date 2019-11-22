@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'certificates.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd6i1op20m9r5ko',
+        'USER':'lfaoivimqqeolu',
+        'PASSWORD':'41db93bd21fbdb2c677dc35744ef64af3e8c85c795cc7252f107d7eff81744c6',
+        'PORT':'5432',
+        'HOST':'ec2-174-129-222-15.compute-1.amazonaws.com',
     }
 }
 
