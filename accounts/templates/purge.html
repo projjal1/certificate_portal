@@ -1,0 +1,27 @@
+{%extends 'home.html'%}
+
+
+{% block content%}
+
+{% if error %}
+
+<p class="headers">{{error}}</p>
+{% endif%}
+<br>
+
+<h1>Purge All</h1>
+<br>
+
+<br>
+{%if ds%}
+<p>Currently having {{ds}} no. of databases.</p>
+{%else%}
+<p>You have not uploaded any database as of yet.</p>
+{%endif%}
+<br>
+<form method="POST" action="{%url 'purge' %}">
+{%csrf_token%}
+    <input class="btn btn-primary" type="submit" value="Purge All" />
+</form>
+
+{%endblock%}

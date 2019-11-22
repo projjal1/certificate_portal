@@ -1,0 +1,40 @@
+{%extends 'home.html'%}
+
+
+{% block content%}
+
+{% if error %}
+
+<p class="headers">{{error}}</p>
+{% endif%}
+<br>
+
+<h1>Upload Database with certificate.</h1>
+<br>
+
+<br>
+<form method="post" action="{%url 'uploads'%}" enctype="multipart/form-data">
+{%csrf_token%}
+
+    Title for entry:
+    <br>
+    <input type="text" name="title"/>
+    <br>
+    <br>
+    Database in csv format:
+    <br>
+    <input type="file" name='file_ds'/>
+    <br>
+    <br>
+    Upload certficate:
+    <br>
+    <input type="file" name='cert'/>
+    <br>
+    <br>
+
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit!" />
+
+</form>
+
+{%endblock%}

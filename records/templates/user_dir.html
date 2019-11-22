@@ -1,0 +1,28 @@
+{%extends 'home.html'%}
+
+
+{% block content%}
+
+{% if error %}
+
+<p class="headers">{{error}}</p>
+{% endif%}
+<br>
+
+<h1>Log In!</h1>
+
+<br>
+<br>
+<form method="POST" action="{%url 'fetch' %}">
+{%csrf_token%}
+
+    Full Name:
+    <br>
+    <input type="text" name="username"/>
+    <br>
+    <br>
+    <input class="btn btn-primary" type="submit" value="Enter name" />
+
+</form>
+
+{%endblock%}
