@@ -35,7 +35,7 @@ def certificate_gen(request):
         contest=request.POST['contest']
         img_path='admin_files/'+contest+'.jpg'
 
-        img = Image.open("out.jpg")
+        img = Image.open(img_path)
         draw = ImageDraw.Draw(img)
         # font = ImageFont.truetype(<font-file>, <font-size>)
         font = ImageFont.truetype("entry_file/arial.ttf",50)
