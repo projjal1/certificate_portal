@@ -35,6 +35,12 @@ def certificate_gen(request):
         contest=request.POST['contest']
         img_path='admin_files/'+contest+'.jpg'
 
+        #whether or not to set event name(no for organizer)
+        set_event_name=True
+        if contest=='organizer':
+            set_event_name=False
+
+
         l=len(usr)
         x=0
         if(l>=14):
@@ -52,7 +58,10 @@ def certificate_gen(request):
         # draw.text((x, y),"Sample Text",(r,g,b))
         draw.text((start,340),usr,fill='black',font=font)
         font = ImageFont.truetype("entry_file/arial.ttf",25)
-        draw.text((530,465),contest,fill='black',font=font)
+        
+        #print name for only non-organizer events
+        if set_event_name==True:
+            draw.text((530,465),contest,fill='black',font=font)
         
         img.save('output_files/output.jpg')
 
