@@ -1,4 +1,4 @@
-{%extends 'home.html'%}
+{%extends 'base.html'%}
 
 
 {% block content%}
@@ -9,14 +9,15 @@
 {% endif%}
 <br>
 
-<h1>Log In!</h1>
+<h1>Enter your name as on certificate</h1>
 
 <br>
 <br>
+
 <form method="POST" action="{%url 'fetch' %}">
 {%csrf_token%}
-
     Full Name:
+    <br>
     <br>
     <input type="text" name="username"/>
     <br>
