@@ -1,8 +1,8 @@
 Codathon
+Extempore
+ShutterBugs
 TechC
+UInvent
 Wall
 Writeups
-Extempore
-Shutterbugs
-Uinvent
 organizer

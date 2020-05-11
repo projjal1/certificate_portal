@@ -56,7 +56,12 @@ def certificate_gen(request):
         # font = ImageFont.truetype(<font-file>, <font-size>)
         font = ImageFont.truetype("entry_file/arial.ttf",50)
         # draw.text((x, y),"Sample Text",(r,g,b))
-        draw.text((start,340),usr,fill='black',font=font)
+
+        #changes made for organizer policy due to inconsistency in pixels
+        if contest=='organizer':
+            draw.text((start+180,470),usr,fill='black',font=font)
+        else:
+            draw.text((start,340),usr,fill='black',font=font)
         font = ImageFont.truetype("entry_file/arial.ttf",25)
         
         #print name for only non-organizer events
