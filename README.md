@@ -5,7 +5,7 @@ Fork this project.
 
 For admin who want to use this. 
 
-admin password given is user:admin   pass:WhiteFoxis7
+Create admin using superuser command in Django from Command Line
 
 Note:
 
