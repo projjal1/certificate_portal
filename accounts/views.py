@@ -45,5 +45,3 @@ def purge(request):
             arr.append(each)
         data.close()
         return render(request,'purge.html',{'ds':x,'rec':arr})
-
-
